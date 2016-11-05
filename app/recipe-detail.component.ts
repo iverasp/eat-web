@@ -5,24 +5,32 @@ import {Recipe} from "./recipe";
 @Component({
     moduleId: module.id,
     selector: 'my-recipe-detail',
-    template: '<h3>My detail</h3>'
+    templateUrl: 'recipe-detail.component.html',
+    styleUrls: ['recipe-detail.component.css']
 })
 export class RecipeDetailComponent implements OnInit {
-
-    @Input() recipe: Recipe;
+    recipe: Recipe;
 
     constructor(
         private recipeService: RecipeService,
-        private route: ActivatedRoute,
-        private location: Location
+        private route: ActivatedRoute
     ) {}
 
     ngOnInit(): void {
         this.route.params.forEach((params: Params) => {
             let id = +params['id'];
             this.recipeService.getRecipe(id)
-                .then(hero => this.recipe = hero);
+                .then(recipe => this.recipe = recipe);
         });
+    }
+
+    saveRecipe(): void {
+        this.recipeService.updateRecipe(this.recipe)
+            .then(() => this.alertSaved());
+    }
+
+    alertSaved(): void {
+
     }
 
     goBack(): void {

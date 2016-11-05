@@ -1,0 +1,13 @@
+<h2>My Recipes</h2>
+<div>
+    <label>Recipe name:</label> <input #recipeName />
+    <button (click)="addRecipe(recipeName.value); recipeName.value=''">
+        Add
+    </button>
+</div>
+<ul class="recipes">
+    <li *ngFor="let recipe of recipes" (click)="gotoDetail(recipe)">
+        <span class="badge">{{recipe.id}}</span>
+        <span>{{recipe.name}}</span>
+    </li>
+</ul>
