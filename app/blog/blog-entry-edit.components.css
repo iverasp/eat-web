@@ -1,0 +1,30 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Droid+Serif:400,400italic,700);
+
+label {
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+}
+
+input {
+    margin: 1em 0 1em 0;
+    font-family: "Droid Serif", serif;
+    font-size: 16px;
+}
+textarea {
+    margin: 1em 0 1em 0;
+    font-family: "Droid Serif", serif;
+    font-size: 16px;
+}
+
+.button {
+    float: right;
+    min-width: 150px;
+    max-width: 250px;
+    padding: 10px;
+    border: solid 1px #000;
+    background: #ee9900;
+}
+
+.published {
+    float: right;
+}

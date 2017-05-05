@@ -1,0 +1,33 @@
+.nav-bar {
+    margin: 2em;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+h2 {
+    display: inline;
+}
+
+li {
+    display: inline;
+    padding-right: 10px;
+    color: #b6b6b6;
+    text-transform: uppercase;
+}
+
+a {
+    line-height: 30px;
+    display: inline-block;
+    margin-right: 10px;
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+    letter-spacing: 2pt;
+    text-decoration: none;
+    color: #b6b6b6;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    margin-bottom: 0px;
+}

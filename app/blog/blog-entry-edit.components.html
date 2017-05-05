@@ -1,0 +1,52 @@
+<h2 *ngIf="!blogEntry">Blog entry not found!</h2>
+<div *ngIf="blogEntry">
+
+    <div class="container">
+
+        <h2>Edit blog post</h2>
+
+        <form action="#">
+            <label for="published">Publish</label>
+            <input type="checkbox" name="published" id="published" class="published" value="Published">
+
+            <button type="submit" (click)="saveEntry()" class="button">
+                <i class="fa fa-floppy-o" aria-hidden="true"></i> Save
+            </button>
+
+            <label for="title">Title</label>
+            <input name="title" id="title" spellcheck="true" [(ngModel)]="blogEntry.title" style="width:100%;">
+
+            <label for="summary">Summary</label>
+            <textarea name="summary" id="summary" spellcheck="true" [(ngModel)]="blogEntry.summary" style="width:100%;"></textarea>
+
+            <div>
+
+                <img-cropper [image]="photoData" [settings]="cropperSettings" (onCrop)="cropped($event)"></img-cropper>
+                <span class="result" *ngIf="photoData.image" >
+        <img [src]="photoData.image"
+             [width]="croppedWidth"
+             [height]="croppedHeight">
+        {{photoData.image.length}}
+    </span>
+
+
+            </div>
+
+            <div fxLayout fxLayoutGap="20px" fxLayout.sm="column">
+
+                <div fxFlex="50%">
+
+                    <label for="contents">Contents</label>
+                    <textarea name="contents" id="contents" spellcheck="true" style="width:100%; height:100%;" [(ngModel)]="blogEntry.contents">
+            </textarea>
+
+                </div>
+
+                <div fxFlex="50%" style="overflow: auto; height:100%">
+                    <label for="rendered">Rendered</label>
+                    <markdown [data]="blogEntry.contents" id="rendered"></markdown>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -18,9 +18,13 @@
       '@angular/router': 'npm:@angular/router/bundles/router.umd.js',
       '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
       '@angular/upgrade': 'npm:@angular/upgrade/bundles/upgrade.umd.js',
+      '@angular/flex-layout': 'npm:@angular/flex-layout/bundles/flex-layout.umd.js',
+      '@angular/material': 'npm:@angular/material/bundles/material.umd.js',
+      'angular2-markdown': 'npm:angular2-markdown/bundles/angular2-markdown.umd.js',
       // other libraries
       'rxjs':                      'npm:rxjs',
-      'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js'
+      'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
+      'ng2-img-cropper': 'npm:ng2-img-cropper'
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {
@@ -30,6 +34,10 @@
       },
       rxjs: {
         defaultExtension: 'js'
+      },
+      'ng2-img-cropper' : {
+          main: 'index.js',
+          defaultExtension: 'js'
       }
     }
   });

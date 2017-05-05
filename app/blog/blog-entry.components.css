@@ -1,0 +1,122 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Droid+Serif:400,400italic,700);
+
+.blog-post-contents p {
+     font-family: "Droid Serif", serif;
+     font-size: 16px;
+ }
+
+.post-meta {
+    color: #b6b6b6;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+/* line 8, ../sass/partials/_shared.sass */
+
+.post-meta a {
+    color: #b6b6b6;
+}
+/* line 11, ../sass/partials/_shared.sass */
+
+.post-meta a:hover, .meta a:active {
+    text-decoration: none;
+    color: #333337;
+    border-bottom: 1px solid #b6b6b6;
+}
+
+/* line 48, ../sass/partials/_single.sass */
+.blog-post-contents {
+    padding: 30px 8%;
+}
+@media (min-width: 992px) {
+    /* line 48, ../sass/partials/_single.sass */
+    .blog-post-contents {
+        padding: 30px 14% 70px;
+    }
+}
+@media (min-width: 1200px) {
+    /* line 48, ../sass/partials/_single.sass */
+    .blog-post-contents {
+        padding: 30px 18% 170px;
+    }
+}
+
+/* line 48, ../sass/partials/_single.sass */
+.blog-post-header h2 {
+    padding-left: 8%
+}
+@media (min-width: 992px) {
+    /* line 48, ../sass/partials/_single.sass */
+    .blog-post-header h2 {
+        padding-left: 14%;
+    }
+}
+@media (min-width: 1200px) {
+    /* line 48, ../sass/partials/_single.sass */
+    .blog-post-header h2 {
+        padding-left: 18%;
+    }
+}
+
+/* line 57, ../sass/partials/_single.sass */
+.blog-post-contents h1,
+.single-content-sidebar h1 {
+    letter-spacing: -1pt;
+}
+@media (min-width: 768px) {
+    /* line 57, ../sass/partials/_single.sass */
+    .blog-post-contents h1,
+    .single-content-sidebar h1 {
+        font-size: 44px;
+    }
+}
+/* line 62, ../sass/partials/_single.sass */
+.blog-post-contents h2,
+.single-content-sidebar h2 {
+    font-size: 28px;
+}
+
+.blog-post-footer {
+    border-top: solid 1px #b6b6b6;
+    padding: 3em;
+    background-color: #F5F5F5;
+}
+
+.blog-post-footer p {
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 30px;
+    letter-spacing: 2px;
+    display: block;
+    color: #333337;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.blog-post-footer span {
+    border-bottom: solid 1px #222;
+}
+
+.blog-post-header h2 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.blog-post-header {
+    position: relative;
+    width: 100%; /* for IE 6 */
+}
+
+.blog-post-header img {
+    width: 100%;
+}
+
+.blog-post-header h2 span {
+    color: white;
+    font: bold 24px/45px Helvetica, Sans-Serif;
+    letter-spacing: -1px;
+    background: rgb(0, 0, 0); /* fallback color */
+    background: rgba(0, 0, 0, 0.55);
+    padding: 10px;
+}

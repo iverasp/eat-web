@@ -1,0 +1,39 @@
+<h2 *ngIf="!blogEntry">Blog entry not found!</h2>
+<div *ngIf="blogEntry">
+
+
+    <div class="blog-post-header">
+        <img src="img/featured.png">
+        <h2>
+            <span>
+                {{blogEntry.title}}
+                <a href="/blog/edit/{{blogEntry.id}}">
+                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                </a>
+            </span>
+        </h2>
+    </div>
+<div class="blog-post-contents">
+
+<div Markdown>
+
+{{blogEntry.contents}}
+
+
+</div>
+</div>
+
+    <div class="blog-post-footer">
+        <p >Published
+            <span>
+                {{blogEntry.timeCreated | date: 'd' | ordinal}} of {{blogEntry.timeCreated | date: 'MMMM, yyyy'}}
+            </span>
+        </p>
+        <p >
+            <a href="#">{{blogEntry.author}}</a>
+            in
+            <a href="/blog?category={{blogEntry.category.name | lowercase}}">{{blogEntry.category.name}}</a>
+        </p>
+    </div>
+
+</div>

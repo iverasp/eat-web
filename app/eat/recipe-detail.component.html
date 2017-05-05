@@ -1,0 +1,24 @@
+<h2 *ngIf="!recipe">Recipe not found!</h2>
+<div *ngIf="recipe">
+    <h2>{{recipe.name}} details!</h2>
+    <div>
+        <label>id: </label>{{recipe.id}}
+    </div>
+    Created: {{recipe.created}}
+    Last edited: {{recipe.last_edited}}
+    <div>
+        <label>name: </label>
+        <input [(ngModel)]="recipe.name" placeholder="name" />
+    </div>
+    <div>
+        <label>ingredients: </label>
+        <input [(ngModel)]="recipe.ingredients" placeholder="ingredients" />
+    </div>
+    <div>
+        <label>instructions: </label>
+        <input [(ngModel)]="recipe.instructions" placeholder="instructions" />
+    </div>
+
+    <button (click)="goBack()">Back</button>
+    <button (click)="saveRecipe()">Save</button>
+</div>

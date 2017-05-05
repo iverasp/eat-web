@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {Recipe} from "./recipe";
+import {Recipe} from "./eat/recipe";
 import {Router} from "@angular/router";
-import {RecipeService} from "./recipe.service";
+import {RecipeService} from "./eat/recipe.service";
 
 @Component({
     moduleId: module.id,

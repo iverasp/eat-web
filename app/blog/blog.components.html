@@ -1,0 +1,48 @@
+<div class="container" fxLayout fxLayoutGap="20px">
+
+    <section class="main-content">
+
+        <div fxFlex="50%">
+            <div class="sub-nav">
+                <p>Posts</p>
+            </div>
+            <div *ngFor="let blogEntry of blogEntries">
+                <article class="post">
+                    <div class="post-preview no-gutter">
+                        <h2><a routerLink="/blog/{{blogEntry.slug}}">{{blogEntry.title}}</a></h2>
+
+                        <p>{{blogEntry.summary}}</p>
+
+                        <p class="post-meta">
+                            <a href="author.html">{{blogEntry.author}}</a>
+                            in
+                            <a href="category.html">{{blogEntry.category.name}}</a>
+                            <i class="fa fa-calendar"></i>
+                            {{blogEntry.timeCreated | date: 'dd/MM/yyyy'}}
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <div fxFlex="50%">
+            <div class="sub-nav">
+                <p>Categories</p>
+            </div>
+            <div class="home-page-categories">
+                <div class="category" fxLayoutWrap fxLayoutGap="20px">
+                    <div *ngFor="let blogCategory of blogCategories" fxFlex="150px">
+                        <div class="category-preview" >
+                            <h2>{{blogCategory.name}}</h2>
+                            <a href="blog?category={{blogCategory.name | lowercase}}">
+                                <img src="{{blogCategory.photoUri}}" alt="category-{{blogCategory.name}}">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</div>
